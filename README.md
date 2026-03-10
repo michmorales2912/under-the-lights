@@ -1,4 +1,5 @@
 # Under the Lights
+<img width="247" height="210" alt="Screenshot_2026-02-04_082202-removebg-preview" src="https://github.com/user-attachments/assets/caf93142-ea60-41d2-b844-e5e8842facd6" />
 
 Videojuego 2D de thriller psicológico desarrollado en Unity para Android.
 El juego se centra en la relación entre un padre y su hija que intentan sobrevivir en una ciudad en cuarentena donde la luz representa peligro.
