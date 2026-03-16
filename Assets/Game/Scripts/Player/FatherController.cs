@@ -1,16 +1,14 @@
 using UnityEngine;
 
-/// <summary>
-/// Controla el movimiento del padre usando el joystick virtual.
-/// Requiere Rigidbody2D en el mismo GameObject.
-/// </summary>
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(Animator))]
 public class FatherController : MonoBehaviour
 {
     [Header("Movimiento")]
     public float moveSpeed = 3.5f;
     public float crouchSpeedMultiplier = 0.5f;
+
+    [Header("Salto")]
+    public float jumpForce = 8f;
 
     [Header("Referencias")]
     public VirtualJoystick joystick;
@@ -18,28 +16,21 @@ public class FatherController : MonoBehaviour
     [Header("Sprite")]
     public bool flipOnMove = true;
 
-    // Estado
+    // Estado público
     public bool IsCrouching { get; private set; } = false;
     public bool IsMoving    { get; private set; } = false;
+    public bool IsGrounded  { get; private set; } = false;
     public Vector2 MoveDirection { get; private set; }
 
-    private Rigidbody2D _rb;
-    private Animator    _anim;
+    private Rigidbody2D    _rb;
     private SpriteRenderer _sr;
 
     void Awake()
     {
-        _rb   = GetComponent<Rigidbody2D>();
-        _anim = GetComponent<Animator>();
-        _sr   = GetComponent<SpriteRenderer>();
-
-        _rb.gravityScale = 0f; // Juego 2D side-scroll sin gravedad (plataformer se ajusta después)
+        _rb = GetComponent<Rigidbody2D>();
+        _sr = GetComponent<SpriteRenderer>();
         _rb.freezeRotation = true;
-    }
-
-    void Update()
-    {
-        HandleCrouch();
+        _rb.gravityScale   = 3f;
     }
 
     void FixedUpdate()
@@ -51,47 +42,40 @@ public class FatherController : MonoBehaviour
     {
         if (GameManager.Instance != null && GameManager.Instance.isGameOver)
         {
-            _rb.linearVelocity = Vector2.zero;
+            _rb.linearVelocity = new Vector2(0, _rb.linearVelocity.y);
             return;
         }
 
         Vector2 input = joystick != null ? joystick.InputDirection : Vector2.zero;
         MoveDirection = input;
-        IsMoving = input.magnitude > 0.1f;
+        IsMoving = Mathf.Abs(input.x) > 0.1f;
 
         float speed = moveSpeed * (IsCrouching ? crouchSpeedMultiplier : 1f);
-        _rb.linearVelocity = input * speed;
+        _rb.linearVelocity = new Vector2(input.x * speed, _rb.linearVelocity.y);
 
-        // Flip del sprite según dirección horizontal
         if (flipOnMove && _sr != null && Mathf.Abs(input.x) > 0.05f)
             _sr.flipX = input.x < 0;
-
-        // Animaciones
-        if (_anim != null)
-        {
-            _anim.SetBool("IsMoving",   IsMoving);
-            _anim.SetBool("IsCrouching", IsCrouching);
-        }
     }
 
-    void HandleCrouch()
+    // Detectar suelo por colisión directa
+    void OnCollisionEnter2D(Collision2D col)
     {
-        // El agacharse se activa desde el botón de crouch (ver CrouchButton.cs)
-        // También se puede activar cuando el joystick apunta fuerte hacia abajo
-        if (joystick != null && joystick.InputDirection.y < -0.8f)
-            SetCrouch(true);
-        else if (joystick != null && joystick.InputDirection.y >= -0.8f && IsCrouching)
-            SetCrouch(false);
+        if (col.gameObject.CompareTag("Ground"))
+            IsGrounded = true;
     }
 
-    public void SetCrouch(bool value)
+    void OnCollisionExit2D(Collision2D col)
     {
-        IsCrouching = value;
+        if (col.gameObject.CompareTag("Ground"))
+            IsGrounded = false;
     }
 
-    // Llamado externamente por botón dedicado de crouch
-    public void ToggleCrouch()
+    public void Jump()
     {
-        IsCrouching = !IsCrouching;
+        if (!IsGrounded) return;
+        _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
     }
+
+    public void SetCrouch(bool value) => IsCrouching = value;
+    public void ToggleCrouch()        => IsCrouching = !IsCrouching;
 }

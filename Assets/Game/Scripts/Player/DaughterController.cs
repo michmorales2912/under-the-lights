@@ -1,43 +1,39 @@
 using UnityEngine;
 
-/// <summary>
-/// La hija sigue al padre automáticamente manteniéndose cerca.
-/// Implementa seguimiento suave con offset y detección de obstáculos.
-/// </summary>
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(Animator))]
 public class DaughterController : MonoBehaviour
 {
     [Header("Referencias")]
     public FatherController father;
 
     [Header("Seguimiento")]
-    public float followSpeed       = 3.0f;
-    public float followDistance    = 1.2f;   // distancia ideal al padre
-    public float stopDistance      = 0.6f;   // distancia mínima antes de detenerse
-    public float catchUpMultiplier = 1.8f;   // se apresura si queda muy atrás
+    public float followSpeed    = 4.0f;
+    public float stopDistance   = 0.8f;
 
-    [Header("Posición relativa")]
-    public Vector2 followOffset = new Vector2(-0.8f, 0f); // ligeramente detrás del padre
+    [Header("Offset respecto al padre")]
+    public float offsetX = -0.8f;
+    public float offsetY = 0f;
 
-    [Header("Sprite")]
-    public bool flipWithFather = true;
-
-    // Estado público
-    public bool IsMoving { get; private set; }
-
-    private Rigidbody2D  _rb;
-    private Animator     _anim;
+    private Rigidbody2D    _rb;
     private SpriteRenderer _sr;
+    private SpriteRenderer _fatherSr;
+
+    public bool IsMoving { get; private set; }
 
     void Awake()
     {
-        _rb  = GetComponent<Rigidbody2D>();
-        _anim = GetComponent<Animator>();
-        _sr  = GetComponent<SpriteRenderer>();
+        _rb = GetComponent<Rigidbody2D>();
+        _sr = GetComponent<SpriteRenderer>();
 
         _rb.gravityScale   = 0f;
         _rb.freezeRotation = true;
+        _rb.isKinematic    = true; // Kinematic: se mueve solo por script, ignora física
+    }
+
+    void Start()
+    {
+        if (father != null)
+            _fatherSr = father.GetComponent<SpriteRenderer>();
     }
 
     void FixedUpdate()
@@ -54,44 +50,33 @@ public class DaughterController : MonoBehaviour
 
     void FollowFather()
     {
-        // Calcula el offset según hacia dónde mira el padre
-        float fatherDir = father.GetComponent<SpriteRenderer>().flipX ? 1f : -1f;
-        Vector2 offset  = new Vector2(followOffset.x * fatherDir, followOffset.y);
-        Vector2 targetPos = (Vector2)father.transform.position + offset;
+        // Offset siempre detrás del padre según su dirección
+        float dir = (_fatherSr != null && _fatherSr.flipX) ? 1f : -1f;
+        Vector2 targetPos = new Vector2(
+            father.transform.position.x + offsetX * dir,
+            father.transform.position.y + offsetY // misma Y que el padre
+        );
 
         float dist = Vector2.Distance(transform.position, targetPos);
         IsMoving   = dist > stopDistance;
 
-        if (!IsMoving)
+        if (IsMoving)
         {
-            _rb.linearVelocity = Vector2.zero;
-        }
-        else
-        {
-            // Acelera si está muy lejos (la hija corre para alcanzar)
-            float speedMultiplier = dist > followDistance * 2.5f ? catchUpMultiplier : 1f;
-            Vector2 dir = (targetPos - (Vector2)transform.position).normalized;
-            _rb.linearVelocity = dir * followSpeed * speedMultiplier;
+            Vector2 newPos = Vector2.MoveTowards(
+                _rb.position,
+                targetPos,
+                followSpeed * Time.fixedDeltaTime
+            );
+            _rb.MovePosition(newPos);
         }
 
-        // Flip del sprite
-        if (flipWithFather && _sr != null)
-            _sr.flipX = father.GetComponent<SpriteRenderer>().flipX;
-
-        // Animaciones
-        if (_anim != null)
-        {
-            _anim.SetBool("IsMoving",    IsMoving);
-            _anim.SetBool("IsCrouching", father.IsCrouching);
-        }
+        // Flip sprite igual que el padre
+        if (_sr != null && _fatherSr != null)
+            _sr.flipX = _fatherSr.flipX;
     }
 
-    /// <summary>
-    /// Detiene a la hija en el lugar (ej: animación de captura).
-    /// </summary>
     public void StopImmediate()
     {
-        _rb.linearVelocity = Vector2.zero;
         IsMoving = false;
     }
 }
