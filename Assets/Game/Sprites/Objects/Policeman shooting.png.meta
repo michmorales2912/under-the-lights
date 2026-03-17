@@ -1,0 +1,1261 @@
+fileFormatVersion: 2
+guid: 65ca593ef018ab844a6a0fcb280771a6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1553111577412564524
+    second: Policeman shooting_0
+  - first:
+      213: 9024680917896667851
+    second: Policeman shooting_1
+  - first:
+      213: 6017736404133601638
+    second: Policeman shooting_2
+  - first:
+      213: 5259452036992269676
+    second: Policeman shooting_3
+  - first:
+      213: -6626904030517009715
+    second: Policeman shooting_4
+  - first:
+      213: -6770255599353719485
+    second: Policeman shooting_5
+  - first:
+      213: -8522085392798386529
+    second: Policeman shooting_6
+  - first:
+      213: -3126913560179868288
+    second: Policeman shooting_7
+  - first:
+      213: 824003100551393448
+    second: Policeman shooting_8
+  - first:
+      213: 8109677054567904754
+    second: Policeman shooting_9
+  - first:
+      213: -6572275646914457281
+    second: Policeman shooting_10
+  - first:
+      213: -4689226025498199459
+    second: Policeman shooting_11
+  - first:
+      213: 5972105468533109279
+    second: Policeman shooting_12
+  - first:
+      213: 7408495573100028464
+    second: Policeman shooting_13
+  - first:
+      213: 8161302545570200242
+    second: Policeman shooting_14
+  - first:
+      213: 9199520483196337516
+    second: Policeman shooting_15
+  - first:
+      213: -4659658791134112363
+    second: Policeman shooting_16
+  - first:
+      213: -7234375072431557102
+    second: Policeman shooting_17
+  - first:
+      213: 647892430495270751
+    second: Policeman shooting_18
+  - first:
+      213: -168439309769504319
+    second: Policeman shooting_19
+  - first:
+      213: 4688036654411130334
+    second: Policeman shooting_20
+  - first:
+      213: 4167457650170868217
+    second: Policeman shooting_21
+  - first:
+      213: -2411783117214470
+    second: Policeman shooting_22
+  - first:
+      213: 37441148137903450
+    second: Policeman shooting_23
+  - first:
+      213: -6111566855655646490
+    second: Policeman shooting_24
+  - first:
+      213: 4063419243122051357
+    second: Policeman shooting_25
+  - first:
+      213: 7438863642825120064
+    second: Policeman shooting_26
+  - first:
+      213: 409273633162646466
+    second: Policeman shooting_27
+  - first:
+      213: -3968350060414203167
+    second: Policeman shooting_28
+  - first:
+      213: -8871639265496558611
+    second: Policeman shooting_29
+  - first:
+      213: -1016447918099018456
+    second: Policeman shooting_30
+  - first:
+      213: -427309472201735821
+    second: Policeman shooting_31
+  - first:
+      213: 6171255529026022073
+    second: Policeman shooting_32
+  - first:
+      213: 7435232128264532381
+    second: Policeman shooting_33
+  - first:
+      213: -7525110862792459243
+    second: Policeman shooting_34
+  - first:
+      213: -2621285755230117519
+    second: Policeman shooting_35
+  - first:
+      213: -3774591692333356370
+    second: Policeman shooting_36
+  - first:
+      213: -2336451579078773609
+    second: Policeman shooting_37
+  - first:
+      213: -172433798909569116
+    second: Policeman shooting_38
+  - first:
+      213: -3592235444173595727
+    second: Policeman shooting_39
+  - first:
+      213: -5436229582733598269
+    second: Policeman shooting_40
+  - first:
+      213: -8056041641737988336
+    second: Policeman shooting_41
+  - first:
+      213: -5812582299771952786
+    second: Policeman shooting_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Policeman shooting_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 697
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d907c3cf3d327ae0800000000000000
+      internalID: -1553111577412564524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_1
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 697
+        width: 39
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc22a72ea7b1e3d70800000000000000
+      internalID: 9024680917896667851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_2
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 697
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 661e150506b438350800000000000000
+      internalID: 6017736404133601638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_3
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 697
+        width: 39
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6df02a03c35df840800000000000000
+      internalID: 5259452036992269676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_4
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 697
+        width: 40
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc2ed6425e18804a0800000000000000
+      internalID: -6626904030517009715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_5
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 569
+        width: 41
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3451ce917683b02a0800000000000000
+      internalID: -6770255599353719485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_6
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 569
+        width: 42
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f96f4b8bc787bb980800000000000000
+      internalID: -8522085392798386529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_7
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 569
+        width: 43
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08d70222fa8fa94d0800000000000000
+      internalID: -3126913560179868288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_8
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 569
+        width: 44
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a0bf2644727f6b00800000000000000
+      internalID: 824003100551393448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_9
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 569
+        width: 45
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f5f7a0705c5b8070800000000000000
+      internalID: 8109677054567904754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_10
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 441
+        width: 46
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3196bbde169ac4a0800000000000000
+      internalID: -6572275646914457281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_11
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 441
+        width: 47
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5ab9ae36c58ceeb0800000000000000
+      internalID: -4689226025498199459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_12
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 441
+        width: 48
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f127515384e21e250800000000000000
+      internalID: 5972105468533109279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_13
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 441
+        width: 50
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0326eaac87340d660800000000000000
+      internalID: 7408495573100028464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_14
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 441
+        width: 50
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2baf33dbc65c24170800000000000000
+      internalID: 8161302545570200242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_15
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 313
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6df8d863234baf70800000000000000
+      internalID: 9199520483196337516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_16
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 329
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 595dce37401955fb0800000000000000
+      internalID: -4659658791134112363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_17
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 313
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 216b6c373365a9b90800000000000000
+      internalID: -7234375072431557102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_18
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 329
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f57c55c9bb6cdf800800000000000000
+      internalID: 647892430495270751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_19
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 313
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c90af6175599adf0800000000000000
+      internalID: -168439309769504319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_20
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 329
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed5af28bf704f0140800000000000000
+      internalID: 4688036654411130334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_21
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 313
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f13be617a8c5d930800000000000000
+      internalID: 4167457650170868217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_22
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 329
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afce50cfe7e67fff0800000000000000
+      internalID: -2411783117214470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_23
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 313
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a551ebe9684058000800000000000000
+      internalID: 37441148137903450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_24
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 329
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ea1893435a5f2ba0800000000000000
+      internalID: -6111566855655646490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_25
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 185
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d19c6cfc54a246830800000000000000
+      internalID: 4063419243122051357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_26
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 201
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 049d82302172c3760800000000000000
+      internalID: 7438863642825120064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_27
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 185
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c3d79073380ea500800000000000000
+      internalID: 409273633162646466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_28
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 201
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ea8c9035a69de8c0800000000000000
+      internalID: -3968350060414203167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_29
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 185
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de39bac871b91e480800000000000000
+      internalID: -8871639265496558611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_30
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 201
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82dc50df00ad4e1f0800000000000000
+      internalID: -1016447918099018456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_31
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 185
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 371814c8c44e11af0800000000000000
+      internalID: -427309472201735821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_32
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 202
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bae2c9f434b4a550800000000000000
+      internalID: 6171255529026022073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_33
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 185
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9177c32a304f2760800000000000000
+      internalID: 7435232128264532381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_34
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 202
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51c72df3a8f619790800000000000000
+      internalID: -7525110862792459243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_35
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 57
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 171a7b86e725f9bd0800000000000000
+      internalID: -2621285755230117519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_36
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 75
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaa645ebad4fd9bc0800000000000000
+      internalID: -3774591692333356370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_37
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 57
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 794fb1afaa1439fd0800000000000000
+      internalID: -2336451579078773609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_38
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 75
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a759bc9f546b9df0800000000000000
+      internalID: -172433798909569116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_39
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 57
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bb177065e0d52ec0800000000000000
+      internalID: -3592235444173595727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_40
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 75
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c1a1b33ff1ae84b0800000000000000
+      internalID: -5436229582733598269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_41
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 57
+        width: 56
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 017d3704fc0333090800000000000000
+      internalID: -8056041641737988336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Policeman shooting_42
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 57
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e61ae5ad13f855fa0800000000000000
+      internalID: -5812582299771952786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Policeman shooting_0: -1553111577412564524
+      Policeman shooting_1: 9024680917896667851
+      Policeman shooting_10: -6572275646914457281
+      Policeman shooting_11: -4689226025498199459
+      Policeman shooting_12: 5972105468533109279
+      Policeman shooting_13: 7408495573100028464
+      Policeman shooting_14: 8161302545570200242
+      Policeman shooting_15: 9199520483196337516
+      Policeman shooting_16: -4659658791134112363
+      Policeman shooting_17: -7234375072431557102
+      Policeman shooting_18: 647892430495270751
+      Policeman shooting_19: -168439309769504319
+      Policeman shooting_2: 6017736404133601638
+      Policeman shooting_20: 4688036654411130334
+      Policeman shooting_21: 4167457650170868217
+      Policeman shooting_22: -2411783117214470
+      Policeman shooting_23: 37441148137903450
+      Policeman shooting_24: -6111566855655646490
+      Policeman shooting_25: 4063419243122051357
+      Policeman shooting_26: 7438863642825120064
+      Policeman shooting_27: 409273633162646466
+      Policeman shooting_28: -3968350060414203167
+      Policeman shooting_29: -8871639265496558611
+      Policeman shooting_3: 5259452036992269676
+      Policeman shooting_30: -1016447918099018456
+      Policeman shooting_31: -427309472201735821
+      Policeman shooting_32: 6171255529026022073
+      Policeman shooting_33: 7435232128264532381
+      Policeman shooting_34: -7525110862792459243
+      Policeman shooting_35: -2621285755230117519
+      Policeman shooting_36: -3774591692333356370
+      Policeman shooting_37: -2336451579078773609
+      Policeman shooting_38: -172433798909569116
+      Policeman shooting_39: -3592235444173595727
+      Policeman shooting_4: -6626904030517009715
+      Policeman shooting_40: -5436229582733598269
+      Policeman shooting_41: -8056041641737988336
+      Policeman shooting_42: -5812582299771952786
+      Policeman shooting_5: -6770255599353719485
+      Policeman shooting_6: -8522085392798386529
+      Policeman shooting_7: -3126913560179868288
+      Policeman shooting_8: 824003100551393448
+      Policeman shooting_9: 8109677054567904754
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

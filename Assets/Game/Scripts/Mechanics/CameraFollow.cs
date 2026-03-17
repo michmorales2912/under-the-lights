@@ -15,7 +15,7 @@ public class CameraFollow : MonoBehaviour
 
     [Header("Límites del nivel")]
     public float minX = 0f;
-    public float maxX = 50f;
+    public float maxX = 62f;
     public float minY = -5f;
     public float maxY = 5f;
 
