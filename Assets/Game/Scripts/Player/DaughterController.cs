@@ -27,7 +27,7 @@ public class DaughterController : MonoBehaviour
 
         _rb.gravityScale   = 0f;
         _rb.freezeRotation = true;
-        _rb.isKinematic    = true; // Kinematic: se mueve solo por script, ignora física
+        _rb.bodyType = RigidbodyType2D.Kinematic;
     }
 
     void Start()

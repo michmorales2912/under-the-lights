@@ -3,10 +3,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-/// <summary>
-/// Controla el estado general del Level_01:
-/// inicio, game over, UI de retry.
-/// </summary>
 public class LevelManager : MonoBehaviour
 {
     [Header("Referencias personajes")]
@@ -28,9 +24,10 @@ public class LevelManager : MonoBehaviour
     public float gameOverFadeDelay    = 0.8f;
     public float gameOverFadeDuration = 1.2f;
 
+    private bool _gameOverShown = false;
+
     void Start()
     {
-        // Panel de game over oculto al inicio
         if (gameOverPanel != null)
         {
             gameOverPanel.alpha          = 0f;
@@ -44,12 +41,11 @@ public class LevelManager : MonoBehaviour
 
     void Update()
     {
-        // Detectar game over desde GameManager
-        if (GameManager.Instance != null &&
-            GameManager.Instance.isGameOver &&
-            gameOverPanel != null &&
-            gameOverPanel.alpha == 0f)
+        if (_gameOverShown) return;
+
+        if (GameManager.Instance != null && GameManager.Instance.isGameOver)
         {
+            _gameOverShown = true;
             StartCoroutine(ShowGameOver());
         }
     }
@@ -58,11 +54,9 @@ public class LevelManager : MonoBehaviour
     {
         yield return new WaitForSeconds(gameOverFadeDelay);
 
-        // Textos
         if (gameOverTitle    != null) gameOverTitle.text    = capturedTitle;
         if (gameOverSubtitle != null) gameOverSubtitle.text = capturedSubtitle;
 
-        // Fade in del panel
         float elapsed = 0f;
         while (elapsed < gameOverFadeDuration)
         {
@@ -78,6 +72,7 @@ public class LevelManager : MonoBehaviour
 
     void OnRetryPressed()
     {
+        _gameOverShown = false;
         exposureSystem?.ResetExposure();
         GameManager.Instance?.RestartGame();
     }

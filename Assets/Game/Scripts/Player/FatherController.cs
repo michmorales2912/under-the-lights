@@ -8,7 +8,7 @@ public class FatherController : MonoBehaviour
     public float crouchSpeedMultiplier = 0.5f;
 
     [Header("Salto")]
-    public float jumpForce = 8f;
+    public float jumpForce = 10f;
 
     [Header("Referencias")]
     public VirtualJoystick joystick;
@@ -38,24 +38,27 @@ public class FatherController : MonoBehaviour
         HandleMovement();
     }
 
-    void HandleMovement()
+  void HandleMovement()
+{
+    if (GameManager.Instance != null && GameManager.Instance.isGameOver)
     {
-        if (GameManager.Instance != null && GameManager.Instance.isGameOver)
-        {
-            _rb.linearVelocity = new Vector2(0, _rb.linearVelocity.y);
-            return;
-        }
-
-        Vector2 input = joystick != null ? joystick.InputDirection : Vector2.zero;
-        MoveDirection = input;
-        IsMoving = Mathf.Abs(input.x) > 0.1f;
-
-        float speed = moveSpeed * (IsCrouching ? crouchSpeedMultiplier : 1f);
-        _rb.linearVelocity = new Vector2(input.x * speed, _rb.linearVelocity.y);
-
-        if (flipOnMove && _sr != null && Mathf.Abs(input.x) > 0.05f)
-            _sr.flipX = input.x < 0;
+        _rb.linearVelocity = new Vector2(0, _rb.linearVelocity.y);
+        return;
     }
+
+    // Joystick o teclado (lo que tenga input)
+    Vector2 joystickInput = joystick != null ? joystick.InputDirection : Vector2.zero;
+    float keyInput = Input.GetAxis("Horizontal");
+    
+    float horizontal = Mathf.Abs(joystickInput.x) > 0.1f ? joystickInput.x : keyInput;
+
+    IsMoving = Mathf.Abs(horizontal) > 0.1f;
+    float speed = moveSpeed * (IsCrouching ? crouchSpeedMultiplier : 1f);
+    _rb.linearVelocity = new Vector2(horizontal * speed, _rb.linearVelocity.y);
+
+    if (flipOnMove && _sr != null && Mathf.Abs(horizontal) > 0.05f)
+        _sr.flipX = horizontal < 0;
+}
 
     // Detectar suelo por colisión directa
     void OnCollisionEnter2D(Collision2D col)
@@ -78,4 +81,9 @@ public class FatherController : MonoBehaviour
 
     public void SetCrouch(bool value) => IsCrouching = value;
     public void ToggleCrouch()        => IsCrouching = !IsCrouching;
-}
+    void Update()
+{
+    if (Input.GetKeyDown(KeyCode.Space))
+        Jump();
+    
+}}

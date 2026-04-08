@@ -712,6 +712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 346230410}
   - component: {fileID: 346230411}
+  - component: {fileID: 346230412}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -749,6 +750,20 @@ MonoBehaviour:
   title: {fileID: 1512126120}
   subtitle: {fileID: 1600800004}
   startButton: {fileID: 762579477}
+--- !u!114 &346230412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346230409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69483479c4c785f4f9c657b2a501ea29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  isGameOver: 0
+  isPaused: 0
 --- !u!1 &434899683
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,6 +808,7 @@ GameObject:
   - component: {fileID: 762579479}
   - component: {fileID: 762579478}
   - component: {fileID: 762579477}
+  - component: {fileID: 762579480}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -863,7 +879,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 762579478}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 767191441}
+        m_TargetAssemblyTypeName: IntroSceneController, Assembly-CSharp
+        m_MethodName: OnStartPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &762579478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -902,6 +930,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762579475}
   m_CullTransparentMesh: 1
+--- !u!225 &762579480
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762579475}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!1 &767191440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 767191442}
+  - component: {fileID: 767191441}
+  m_Layer: 0
+  m_Name: SceneController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &767191441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767191440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85f0904dd11b69147b3b92fbe93374eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IntroSceneController
+  titleGroup: {fileID: 1512126122}
+  subtitleGroup: {fileID: 1600800006}
+  buttonGroup: {fileID: 762579480}
+  initialDelay: 1
+  titleFadeDuration: 2.5
+  subtitleDelay: 1.5
+  subtitleFadeDuration: 1.5
+  buttonDelay: 2
+  buttonFadeDuration: 1
+  nextSceneName: Level_01
+--- !u!4 &767191442
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767191440}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &890826393
 GameObject:
   m_ObjectHideFlags: 0
@@ -1703,6 +1797,7 @@ GameObject:
   - component: {fileID: 1512126119}
   - component: {fileID: 1512126121}
   - component: {fileID: 1512126120}
+  - component: {fileID: 1512126122}
   m_Layer: 5
   m_Name: TitleText
   m_TagString: Untagged
@@ -1829,6 +1924,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512126118}
   m_CullTransparentMesh: 1
+--- !u!225 &1512126122
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512126118}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1600800002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1840,6 +1947,7 @@ GameObject:
   - component: {fileID: 1600800003}
   - component: {fileID: 1600800005}
   - component: {fileID: 1600800004}
+  - component: {fileID: 1600800006}
   m_Layer: 5
   m_Name: SubtitleText
   m_TagString: Untagged
@@ -1966,6 +2074,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600800002}
   m_CullTransparentMesh: 1
+--- !u!225 &1600800006
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600800002}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1748584769
 GameObject:
   m_ObjectHideFlags: 0
@@ -2315,3 +2435,4 @@ SceneRoots:
   - {fileID: 434899684}
   - {fileID: 1337544451}
   - {fileID: 890826396}
+  - {fileID: 767191442}

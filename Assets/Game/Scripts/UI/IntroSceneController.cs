@@ -87,6 +87,6 @@ public class IntroSceneController : MonoBehaviour
             yield return null;
         }
 
-        GameManager.Instance.LoadScene(nextSceneName);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneName);
     }
 }
