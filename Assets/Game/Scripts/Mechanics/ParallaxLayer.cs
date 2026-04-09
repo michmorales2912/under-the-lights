@@ -1,35 +1,39 @@
 using UnityEngine;
 
 /// <summary>
-/// Asigna a cada capa del fondo. Scroll automático con loop para la escena de intro.
+/// Scroll automático con loop infinito para fondos.
 /// </summary>
 public class ParallaxLayer : MonoBehaviour
 {
     [Header("Scroll")]
-    public float scrollSpeed = 0.05f;
+    public float scrollSpeed    = 0.05f;
     [Range(0f, 1f)]
     public float parallaxFactor = 0.5f;
+    public bool  autoScroll     = true;
 
-    private float spriteWidth;
-    private float startX;
+    [Header("Loop")]
+    public float spriteWidth = 20f; // ancho del sprite en unidades
+
+    private float _startX;
 
     void Start()
     {
-        var sr = GetComponent<SpriteRenderer>();
-        if (sr != null)
-            spriteWidth = sr.bounds.size.x;
+        _startX = transform.position.x;
 
-        startX = transform.position.x;
+        // Detectar ancho automáticamente si tiene SpriteRenderer
+        var sr = GetComponent<SpriteRenderer>();
+        if (sr != null && sr.sprite != null)
+            spriteWidth = sr.bounds.size.x;
     }
 
     void Update()
     {
+        if (!autoScroll) return;
+
         transform.position += Vector3.left * scrollSpeed * parallaxFactor * Time.deltaTime;
 
-        // Loop infinito
-        if (transform.position.x <= startX - spriteWidth)
-        {
-            transform.position = new Vector3(startX, transform.position.y, transform.position.z);
-        }
+        // Loop infinito cuando sale de pantalla
+        if (transform.position.x <= _startX - spriteWidth)
+            transform.position = new Vector3(_startX, transform.position.y, transform.position.z);
     }
 }

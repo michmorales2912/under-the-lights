@@ -7,23 +7,25 @@ public class GameManager : MonoBehaviour
 
     [Header("Game State")]
     public bool isGameOver = false;
-    public bool isPaused = false;
+    public bool isPaused   = false;
 
-   void Awake()
-{
-    if (Instance == null)
+    void Awake()
     {
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
-    else
-    {
-        Destroy(gameObject);
-    }
-}
 
     public void LoadScene(string sceneName)
     {
+        isGameOver = false;
+        isPaused   = false;
         SceneManager.LoadScene(sceneName);
     }
 
@@ -31,29 +33,20 @@ public class GameManager : MonoBehaviour
     {
         if (isGameOver) return;
         isGameOver = true;
-        Debug.Log("[GameManager] GAME OVER — La niña fue detectada");
-        // Aquí irá la animación de captura más adelante
+        Debug.Log("[GameManager] GAME OVER");
     }
-public void RestartGame()
+
+  public void RestartGame()
 {
     isGameOver = false;
     isPaused   = false;
-
-    if (Checkpoint.HasCheckpoint)
-    {
-        // Recargar escena y reposicionar en checkpoint
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        // El reposicionamiento se hace en LevelManager.Start()
-    }
-    else
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+    Time.timeScale = 1f;
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 }
 
     public void PauseGame(bool pause)
     {
-        isPaused = pause;
+        isPaused       = pause;
         Time.timeScale = pause ? 0f : 1f;
     }
 }

@@ -28,6 +28,10 @@ public class LevelManager : MonoBehaviour
 
     void Start()
     {
+        // Resetear estado por si viene de retry
+        if (GameManager.Instance != null)
+            GameManager.Instance.isGameOver = false;
+
         if (gameOverPanel != null)
         {
             gameOverPanel.alpha          = 0f;
@@ -39,8 +43,15 @@ public class LevelManager : MonoBehaviour
             retryButton.onClick.AddListener(OnRetryPressed);
     }
 
-   void Update()
-{    
+void Update()
+{
+    if (_gameOverShown && Input.GetKeyDown(KeyCode.R))
+        OnRetryPressed();
+
+    // Touch en cualquier parte de la pantalla después del Game Over
+    if (_gameOverShown && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        OnRetryPressed();
+
     if (_gameOverShown) return;
 
     if (GameManager.Instance != null && GameManager.Instance.isGameOver)
@@ -49,7 +60,6 @@ public class LevelManager : MonoBehaviour
         StartCoroutine(ShowGameOver());
     }
 }
-
     IEnumerator ShowGameOver()
     {
         yield return new WaitForSeconds(gameOverFadeDelay);
@@ -61,19 +71,23 @@ public class LevelManager : MonoBehaviour
         while (elapsed < gameOverFadeDuration)
         {
             elapsed += Time.unscaledDeltaTime;
-            gameOverPanel.alpha = Mathf.Clamp01(elapsed / gameOverFadeDuration);
+            if (gameOverPanel != null)
+                gameOverPanel.alpha = Mathf.Clamp01(elapsed / gameOverFadeDuration);
             yield return null;
         }
 
-        gameOverPanel.alpha          = 1f;
-        gameOverPanel.interactable   = true;
-        gameOverPanel.blocksRaycasts = true;
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.alpha          = 1f;
+            gameOverPanel.interactable   = true;
+            gameOverPanel.blocksRaycasts = true;
+        }
     }
 
-    void OnRetryPressed()
-    {
-        _gameOverShown = false;
-        exposureSystem?.ResetExposure();
-        GameManager.Instance?.RestartGame();
-    }
-}
+    public void OnRetryPressed()
+{
+    Debug.Log("Retry presionado");
+    _gameOverShown = false;
+    exposureSystem?.ResetExposure();
+    GameManager.Instance?.RestartGame();
+}}

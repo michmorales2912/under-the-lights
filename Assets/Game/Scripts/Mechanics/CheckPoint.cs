@@ -1,10 +1,5 @@
 using UnityEngine;
-using TMPro;
 
-/// <summary>
-/// Checkpoint — guarda la posición del jugador.
-/// Si hay Game Over, reaparece aquí en lugar del inicio.
-/// </summary>
 [RequireComponent(typeof(Collider2D))]
 public class Checkpoint : MonoBehaviour
 {
@@ -16,11 +11,10 @@ public class Checkpoint : MonoBehaviour
     public Color inactiveColor = new Color(1f, 1f, 1f, 0.3f);
     public Color activeColor   = new Color(0f, 1f, 0.5f, 0.8f);
 
-    private bool _activated = false;
-
-    // Posición de respawn guardada globalmente
     public static Vector3 LastCheckpointPos;
     public static bool    HasCheckpoint = false;
+
+    private bool _activated = false;
 
     void Awake()
     {
@@ -34,14 +28,14 @@ public class Checkpoint : MonoBehaviour
         if (_activated) return;
         if (!other.CompareTag("Player")) return;
 
-        _activated = true;
+        _activated        = true;
         LastCheckpointPos = transform.position;
         HasCheckpoint     = true;
 
         if (indicatorSprite != null)
             indicatorSprite.color = activeColor;
 
-        Debug.Log($"[Checkpoint {checkpointID}] Activado en {transform.position}");
+        Debug.Log($"[Checkpoint {checkpointID}] Activado");
     }
 
     void OnDrawGizmosSelected()
