@@ -39,16 +39,16 @@ public class LevelManager : MonoBehaviour
             retryButton.onClick.AddListener(OnRetryPressed);
     }
 
-    void Update()
-    {
-        if (_gameOverShown) return;
+   void Update()
+{    
+    if (_gameOverShown) return;
 
-        if (GameManager.Instance != null && GameManager.Instance.isGameOver)
-        {
-            _gameOverShown = true;
-            StartCoroutine(ShowGameOver());
-        }
+    if (GameManager.Instance != null && GameManager.Instance.isGameOver)
+    {
+        _gameOverShown = true;
+        StartCoroutine(ShowGameOver());
     }
+}
 
     IEnumerator ShowGameOver()
     {

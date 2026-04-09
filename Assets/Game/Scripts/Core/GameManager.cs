@@ -9,12 +9,17 @@ public class GameManager : MonoBehaviour
     public bool isGameOver = false;
     public bool isPaused = false;
 
-    void Awake()
+   void Awake()
 {
-    if (transform.parent != null)
-        transform.SetParent(null);
-
-    DontDestroyOnLoad(gameObject);
+    if (Instance == null)
+    {
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+    else
+    {
+        Destroy(gameObject);
+    }
 }
 
     public void LoadScene(string sceneName)
