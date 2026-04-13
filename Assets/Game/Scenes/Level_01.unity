@@ -7663,7 +7663,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1717712238}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -9361,7 +9361,7 @@ Animator:
   m_GameObject: {fileID: 2084009338}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7865643cc06ca3e4998b76137cf78ffd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -9486,7 +9486,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 4723107735738678597, guid: d7faac2ab5aff4e4c862783ee3f70429, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 0.9415095, b: 0.9921577, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9494,7 +9494,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2091773512
 GameObject:
@@ -9559,7 +9559,7 @@ Animator:
   m_GameObject: {fileID: 2091773512}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 620103de6f6636141bc59f327473f0fc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -9692,7 +9692,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2119071783
 GameObject:

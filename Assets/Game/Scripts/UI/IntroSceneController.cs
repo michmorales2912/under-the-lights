@@ -17,6 +17,7 @@ public class IntroSceneController : MonoBehaviour
     public float subtitleFadeDuration = 1.5f;
     public float buttonDelay      = 2.0f;
     public float buttonFadeDuration   = 1.0f;
+    private bool _canStart = false;
 
     [Header("Scene")]
     public string nextSceneName = "Level_01";
@@ -38,6 +39,8 @@ public class IntroSceneController : MonoBehaviour
         yield return new WaitForSeconds(buttonDelay);
         yield return FadeTo(buttonGroup, 1f, buttonFadeDuration);
         SetAlpha(buttonGroup, 1f, true); // activa interacción
+        yield return FadeTo(buttonGroup, 1f, buttonFadeDuration);
+        _canStart = true; 
     }
 
     void SetAlpha(CanvasGroup g, float alpha, bool interactable)
@@ -63,8 +66,15 @@ public class IntroSceneController : MonoBehaviour
     // Asignar este método al botón "COMENZAR" en el Inspector
     public void OnStartPressed()
     {
+        Debug.Log("Boton presionado");
         StartCoroutine(FadeOutAndLoad());
     }
+  void Update()
+{
+    // Toca cualquier parte de la pantalla para continuar
+    if (_canStart && (Input.GetMouseButtonDown(0) || Input.touchCount > 0))
+        StartCoroutine(FadeOutAndLoad());
+}
 
     IEnumerator FadeOutAndLoad()
     {

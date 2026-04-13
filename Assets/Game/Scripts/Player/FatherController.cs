@@ -76,7 +76,11 @@ public class FatherController : MonoBehaviour
         if (col.gameObject.CompareTag("Ground"))
             IsGrounded = false;
     }
-
+    void OnCollisionStay2D(Collision2D col)
+{
+    if (col.gameObject.CompareTag("Ground"))
+        IsGrounded = true;
+}
     public void Jump()
     {
         if (!IsGrounded) return;
