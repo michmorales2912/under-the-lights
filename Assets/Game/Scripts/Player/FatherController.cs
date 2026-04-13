@@ -24,6 +24,7 @@ public class FatherController : MonoBehaviour
 
     private Rigidbody2D    _rb;
     private SpriteRenderer _sr;
+    private Animator _anim;
 
     void Awake()
     {
@@ -31,11 +32,14 @@ public class FatherController : MonoBehaviour
         _sr = GetComponent<SpriteRenderer>();
         _rb.freezeRotation = true;
         _rb.gravityScale   = 3f;
+        _anim = GetComponent<Animator>();
     }
 
     void FixedUpdate()
     {
         HandleMovement();
+        if (_anim != null)
+            _anim.SetBool("IsMoving", IsMoving);
     }
 
   void HandleMovement()
@@ -77,6 +81,8 @@ public class FatherController : MonoBehaviour
     {
         if (!IsGrounded) return;
         _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
+        if (_anim != null)
+            _anim.SetTrigger("Jump");
     }
 
     public void SetCrouch(bool value) => IsCrouching = value;
